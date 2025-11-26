@@ -93,7 +93,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       {/* Danger Status */}
       <div className="px-4 mb-6">
         <h2 className="text-lg font-bold text-gray-800 mb-3">현재 환아 상태 요약</h2>
-        <div className="p-5 rounded-2xl bg-red-50 border-2 border-red-500 shadow-sm flex justify-between items-start animate-pulse relative overflow-hidden">
+        <button 
+          onClick={() => onNavigate('triage')}
+          className="w-full text-left p-5 rounded-2xl bg-red-50 border-2 border-red-500 shadow-sm flex justify-between items-start animate-pulse relative overflow-hidden active:scale-95 transition-transform"
+        >
           <div className="absolute top-0 right-0 -mt-2 -mr-2 w-16 h-16 bg-red-500 rounded-full opacity-10 blur-xl"></div>
           <div className="z-10">
             <div className="flex items-center space-x-2 mb-2">
@@ -109,7 +112,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <p className="text-4xl font-black text-red-600 tracking-tighter">{DANGER_DATA.spo2}<span className="text-xl ml-1">%</span></p>
             <p className="text-xs font-bold text-red-400 mt-1 uppercase">SpO2</p>
           </div>
-        </div>
+        </button>
       </div>
 
       {/* Stats Grid */}

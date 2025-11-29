@@ -27,18 +27,18 @@ export interface ChatMessage {
 }
 
 export const DANGER_DATA: PatientData = {
-  name: "김민준",
-  age: 3,
-  emrDiagnosis: "기관지 이형성증 (만성 폐쇄성 폐질환)",
+  name: "김민성",
+  age: 5,
+  emrDiagnosis: "만성 호흡부전 (s/p Tracheostomy)",
   spo2: 89,
   rr: 42,
   vtidal_measured: 60,
   vtidal_target: 55,
-  p_peak_measured: 35,
+  p_peak_measured: 35, // High pressure due to phlegm/obstruction
   p_peak_threshold: 30,
   p_drive_measured: 20,
   fio2_setting: 40,
   rate_setting: 20,
   patient_rate: 22,
-  compliance: "저하"
+  compliance: "저하 (가래/폐쇄 의심)"
 };
